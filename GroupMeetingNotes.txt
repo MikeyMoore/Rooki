@@ -1,0 +1,31 @@
+July 21st, 2016
+
+Team Goals:
+
+3 standups a day
+Core hours(around 10am, except for Friday, to 9pm)
+Group snacks
+Say "I am drinking water" to remind each other to drink water
+Self-care
+Stickynote project board (roadmaps)
+
+
+Stretch Challenges:
+
+Check and checkmate
+?? same file/row Rook moves, or nearby similar Knight moves ??
+Timer
+
+
+questions: 
+
+Do we have users?  Where do we store the finished notation, do we save it for users in the app or do we send it via email?
+
+
+Stacks:
+
+OpenCV
+Python
+
+ReactNative
+JavaScript
