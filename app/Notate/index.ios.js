@@ -18,13 +18,28 @@ class Notate extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to Notate!
-        </Text>
+        <Camera
+          ref={(cam) => {
+            this.camera = cam;
+          }}>
+          <Text style={styles.welcome} onPress={this.takePicture.bind(this)}>Welcome to Notate!</Text>
+        </Camera>
       </View>
     );
   }
+
+  touchButton() {
+    
+  }
+
+  takePicture() {
+    this.camera.capture()
+      .then((data) => console.log(data))
+      .catch(err => console.error(err));
+  }  
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -36,7 +51,8 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 100,
+    borderWidth: 2,
   },
   instructions: {
     textAlign: 'center',
