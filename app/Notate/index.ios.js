@@ -1,3 +1,4 @@
+import NavigationBar from 'react-native-navbar'
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -9,8 +10,9 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
-} from 'react-native';
+  View,
+  TouchableHighlight,
+} from 'react-native'
 
 import Camera from 'react-native-camera';
 
@@ -18,7 +20,15 @@ class Notate extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <NavigationBar
+          style={styles.navbar}
+          title={{ title:  'Notate' , tintColor:  'black' , }}
+          leftButton={{ title: 'Back', }}
+          rightButton={{ title: 'Forward', }}
+          statusBar={{ tintColor: "white", }}
+        />
         <Camera
+          captureTarget={Camera.constants.CaptureTarget.disk, Camera.constants.CaptureQuality.low, Camera.constants.Orientation.portrait }
           ref={(cam) => {
             this.camera = cam;
           }}>
@@ -28,18 +38,12 @@ class Notate extends Component {
     );
   }
 
-  touchButton() {
-    
-  }
-
   takePicture() {
     this.camera.capture()
       .then((data) => console.log(data))
       .catch(err => console.error(err));
   }  
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -54,11 +58,9 @@ const styles = StyleSheet.create({
     margin: 100,
     borderWidth: 2,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  navbar: {
+    backgroundColor:  "white" ,
+  }
 });
 
 AppRegistry.registerComponent('Notate', () => Notate);
