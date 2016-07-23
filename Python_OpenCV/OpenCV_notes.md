@@ -39,3 +39,5 @@ and something like this should appear: -rwxr-xr-x  1 root  staff   2.2M Jul 22 1
 
 
 * in terminal: pip install imutils
+<!-- * in terminal: sudo pip install pillow -->
+* in terminal: pip install image

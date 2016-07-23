@@ -43,7 +43,7 @@ ap.add_argument("-n", "--new", type=int, default=-1,
 args = vars(ap.parse_args())
  
 # load our input image, convert it to grayscale, and blur it slightly
-image = cv2.imread("after2.jpg")
+image = cv2.imread("testOneDarker.jpg")
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 gray = cv2.GaussianBlur(gray, (7, 7), 0)
  
@@ -105,5 +105,5 @@ for (i, c) in enumerate(cnts):
 		cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 2)
  
 	# show the image
-	cv2.imwrite("Image.jpg", image)
-	cv2.waitKey(0)
+	cv2.imwrite("TestOneObjectsDark.jpg", image)
+	# cv2.waitKey(0)
