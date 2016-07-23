@@ -4,6 +4,8 @@ brew install node
 brew install watchman
 npm install -g react-native-cli
 
+react-native run-ios
+
 npm install react-native-camera --save
 npm install rnpm --global
 npm install react-native-camera@https://github.com/lwansbrough/react-native-camera.git --save

@@ -1,0 +1,20 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 27,
+					"ch": 34
+				},
+				"to": {
+					"line": 27,
+					"ch": 41
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "Status Bar Color",
+			"group": "REACT NATIVE NAVBAR"
+		}
+	]
+}
