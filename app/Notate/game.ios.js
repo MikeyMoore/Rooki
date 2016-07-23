@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import {
 	StyleSheet,
 	View,
+	TouchableHighlight,
 	Text,
 } from 'react-native';
 import Camera from 'react-native-camera';
