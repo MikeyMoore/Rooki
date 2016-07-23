@@ -5,6 +5,7 @@ import {
   AppRegistry,
   TabBarIOS,
   StyleSheet,
+  Dimensions,
   Text,
   View,
   TouchableHighlight,
