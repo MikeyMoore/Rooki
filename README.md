@@ -16,6 +16,8 @@
 ## Feature Goals / MVP
 - User can take pictures using phone camera of chess board from within app
 - User is prompted with an alert to take a picture of board at starting position
+- Camera notifies user of picture taken success
+- Camera is squared to only fit the chess board in it's view
 - Each image of board is stored in Firebase (Firestack)
 - User can press endgame button to request entire game notation
 - Each image goes through OpenCV, which returns the pixel coordinates of each move (comparing two photos at a time)
