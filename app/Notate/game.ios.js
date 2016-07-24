@@ -8,6 +8,7 @@ import {
 	Dimensions,
 	TouchableHighlight,
 	Text,
+  CameraRoll,
 } from 'react-native';
 import Camera from 'react-native-camera';
 
@@ -31,10 +32,12 @@ class Game extends Component {
 			<View style={styles.container}>
 				<Camera
           style={styles.preview}
-          aspect={Camera.constants.Aspect.fill}
-          captureTarget={Camera.constants.CaptureTarget.disk, 
-                         Camera.constants.CaptureQuality.low, 
-                         Camera.constants.Orientation.portrait }
+          aspect={Camera.constants.Aspect.fit}
+          orientation={Camera.constants.Orientation.portrait}
+          type={Camera.constants.Type.back}
+          flashMode={Camera.constants.FlashMode.on} 
+          captureMode={Camera.constants.CaptureMode.still}
+          captureTarget={Camera.constants.CaptureTarget.cameraRoll}
           ref={(cam) => {
             this.camera = cam;
           }}>
@@ -56,18 +59,20 @@ const styles = StyleSheet.create({
   },
   preview: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
-    height: Dimensions.get('window').height,
-    width: Dimensions.get('window').width
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').width
   },
   capture: {
     flex: 0,
     backgroundColor: '#fff',
     borderRadius: 5,
     color: '#000',
-    padding: 10,
-    margin: 40
+    margin: 130,
+    padding: 80,
+    fontSize: 24,
+    opacity: .09
   }
 });
 
