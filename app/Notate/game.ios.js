@@ -37,7 +37,7 @@ class Game extends Component {
           type={Camera.constants.Type.back}
           flashMode={Camera.constants.FlashMode.on} 
           captureMode={Camera.constants.CaptureMode.still}
-          captureTarget={Camera.constants.CaptureTarget.disk}
+          captureTarget={Camera.constants.CaptureTarget.cameraRoll}
           ref={(cam) => {
             this.camera = cam;
           }}>
@@ -70,8 +70,9 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     color: '#000',
     margin: 130,
+    padding: 80,
     fontSize: 24,
-    opacity: 0
+    opacity: .09
   }
 });
 
