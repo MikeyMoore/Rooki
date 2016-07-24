@@ -8,10 +8,10 @@
 - B: Justin Wong
 
 ## Stack
-- OpenCV : for detecting change in two images and finding pixel coordinates of change 
-- React Native
-- Firebase (Firestack)
+- MySQL/Firebase
 - Django
+- React Native
+- Python (+ OpenCV)
 
 ## Feature Goals / MVP
 - User can take pictures using phone camera of chess board from within app
