@@ -28,16 +28,27 @@
 - Must send a photo to Firebase utilizing React Native application
 - Firebase must receive a photo from React Native application
 
-## OpenCV
+## Finding movement with OpenCV
+- Level of importance: High
+- Status: Complete
+- Program must be able to compare to images and return an image that represents the movement
+
+## Returning coordinates of start and end points of movement in a digestable format
+- Level of importance: High
+- Status: In Progress 
+- Python program must return the starting and ending coordinates 
 
 ## Python algorithm to generate chess notation
 - Level of importance: High
-- Status: 
+- Status: In Progress
+- Python program must be able to accept coordinates sent to it and return the chess notation for the move
 
-## Django backend 
+## Django skeleton 
 - Level of importance: High
 - Status: Complete
-- Must have a Django backend to handle the 
+- Must have a Django backend skeleton that will be able to hold the Python algorithm and OpenCV logic as well as communicating with Firebase and the React Native application
+
+
 
 ## Scope
 
