@@ -1,7 +1,7 @@
 # Notate Design
 
 ## Design Goals Iteration 1
-- 
+- For Iteration 1 the design needs to prioritize functionality over looks. The team will focus time into making sure the app is sleek and easy to use, but we are aware that we cannot dive too far into design until the application is fully functional.
 
 ## User Research Iteration 1
 - For Iteration 1 the team focused their attention on personal experience and gathered general research from chess players. 
