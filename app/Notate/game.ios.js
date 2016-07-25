@@ -33,7 +33,7 @@ class Game extends Component {
         <Camera
           style={styles.preview}
           style={{width: Dimensions.get('window').width, height: Dimensions.get('window').width}}
-          aspect={Camera.constants.Aspect.fit}
+          aspect={Camera.constants.Aspect.fill}
           orientation={Camera.constants.Orientation.portrait}
           type={Camera.constants.Type.back}
           flashMode={Camera.constants.FlashMode.on} 
