@@ -115,4 +115,5 @@ def coordinates(new_order):
 		# cv2.waitKey(0)
 
 		# return (rect.astype("int"))
-		print box
+		return box[0]
+		

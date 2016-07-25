@@ -4,34 +4,37 @@ from coordinates_new import coordinates
 import argparse
 import sys
 
-def getCoordinates(img1,img2, new_order=-1):
+def getAfterCoordinates(img1,img2, new_order=-1):
 	# this saves as AfterImageMove.jpg
-	#Image_Diff_Detection_After function call
 	print "after"
 	after_image(img1,img2)
 
 
 	# This saves as DarkImageMove.jpg
-	#contrast.py function call
 	darken("../AfterImageMove.jpg")
 
 	# After coordinate function
-	coordinates(new_order)
+	coords = coordinates(new_order)
+	# first axis
+	print coords.flatten()[0] 
+	# second axis
+	print coords.flatten()[1] 
 
+def getBeforeCoordinates(img1,img2, new_order=-1):
 	# this saves as BeforeImageMove.jpg
 	print "before"
 	before_image(img1,img2)
 	
-	# Now for the before coordinates
-	darken("BeforeImageMove.jpg")
+	# This saves as DarkImageMove.jpg
+	darken("../BeforeImageMove.jpg")
 	
 	# Before coordinate function
-	coordinates(new_order)
+	coords = coordinates(new_order)
+	# first axis
+	print coords.flatten()[0] 
+	# second axis
+	print coords.flatten()[1] 
 
-	# os.remove('AfterImageMove.jpg')
-	# os.remove('BeforeImageMove.jpg')
-	# os.remove('DarkImageMove.jpg')
-	# os.remove('ItsAlive.jpg')
 
 
 if __name__ == "__main__":
@@ -40,4 +43,12 @@ if __name__ == "__main__":
 		help="whether or not the new order points should should be used")
 	args = vars(ap.parse_args())
 	print args
-	getCoordinates('IMG_0141.jpg','IMG_0142.jpg', args['new'])
+	# These two images break the before coordinates call
+	# getBeforeCoordinates('IMG_0141.jpg','IMG_0142.jpg', args['new'])
+	getAfterCoordinates('IMG_0141.jpg','IMG_0142.jpg', args['new'])
+
+	# Now we need to remove the images created by OpenCV
+	# os.remove('AfterImageMove.jpg')
+	# os.remove('BeforeImageMove.jpg')
+	# os.remove('DarkImageMove.jpg')
+	
