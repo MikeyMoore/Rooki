@@ -30,6 +30,7 @@ class Game extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text style={styles.blankText}> </Text>
         <Camera
           style={styles.preview}
           style={{width: Dimensions.get('window').width, height: Dimensions.get('window').width}}
@@ -44,6 +45,7 @@ class Game extends Component {
           }}>
           <Text style={styles.capture} onPress={this.takePicture.bind(this)}></Text>
         </Camera>
+        <Text style={styles.endGame} onPress={this.endGame.bind(this)}>[END GAME]</Text>
       </View>
     );
   }
@@ -65,12 +67,18 @@ class Game extends Component {
       }))
       .catch(err => console.error(err));
   }  
+  endGame() {
+    // 
+  };
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'black'
+  },
+  blankText: {
+    margin: 50
   },
   preview: {
     flex: 1,
@@ -86,6 +94,15 @@ const styles = StyleSheet.create({
     // padding: 80,
     fontSize: 24,
     opacity: .09
+  },
+  endGame: {
+    flex: 0,
+    justifyContent: 'center',
+    textAlign: 'center',
+    margin: 40,
+    padding: 20,
+    backgroundColor: 'white',
+    borderRadius: 9
   }
 });
 
