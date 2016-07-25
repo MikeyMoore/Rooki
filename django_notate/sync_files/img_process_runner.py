@@ -44,8 +44,8 @@ if __name__ == "__main__":
 	args = vars(ap.parse_args())
 	print args
 	# These two images break the before coordinates call
-	# getBeforeCoordinates('IMG_0141.jpg','IMG_0142.jpg', args['new'])
-	getAfterCoordinates('IMG_0141.jpg','IMG_0142.jpg', args['new'])
+	getBeforeCoordinates('../../IMG_0261.jpg','../../IMG_0262.jpg', args['new'])
+	getAfterCoordinates('../../IMG_0261.jpg','../../IMG_0262.jpg', args['new'])
 
 	# Now we need to remove the images created by OpenCV
 	# os.remove('AfterImageMove.jpg')
