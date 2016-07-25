@@ -17,14 +17,14 @@ def getCoordinates(img1,img2):
 	# This saves as DarkImageMove.jpg
 	#contrast.py function call
 	darken("AfterImageMove.jpg")
-
+	print "boo"
 	# coordinate function
 	# coordinates()
 	#coordinates_new.py - call
 	coorAfter = coordinates()
-	# print coordinates
+	# coordinates()
 	# return coor
-	print "hey there"
+	# print "hey there"
 	print coorAfter
 
 	# this saves as BeforeImageMove.jpg
