@@ -1,5 +1,5 @@
 # Notate
-- The chess notation app.  Can only be used in conjunction with phone stand.
+- World's first iOS app aiming to automically notate chess notation. Iteration 1 relies on the iPhone being in a fixed position for consistent image positioning.
 
 ## Members
 - Q: Mikey Moore 
@@ -13,7 +13,7 @@
 - React Native
 - Python (+ OpenCV)
 
-## Feature Goals / MVP
+## Feature Goals / MVP for Iteration 1
 - User can take pictures using phone camera of chess board from within app
 - User is prompted with an alert to take a picture of board at starting position
 - Camera notifies user of picture taken success
@@ -24,9 +24,10 @@
 - Those coordinates are translated into notation (see notation format at bottom)
 - User can view the notated output inside app
 
-## Stretch Goals
-- Notate edge cases: castling and en passant
+## Stretch Goals / Goals for future iterations
+- Notate edge cases: castling, en passant, etc.
 - User can download a text file of the finished notation
+- Notation returned after every move
 
 ## Notation Format
 - K: King, Q: Queen, B: Bishop, N: Knight, R: Rook
