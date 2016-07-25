@@ -30,8 +30,10 @@ class Notate extends Component {
       <TabBarIOS selectedTab={this.state.selectedTab}>
 
       <TabBarIOS.Item
+      style={styles.tabs}
       selected={this.state.selectedTab === 'game'}
       // icon={{uri:'gameplay'}}
+      title='Game'
       onPress={() => {
         this.setState({
           selectedTab: 'game'
@@ -41,8 +43,10 @@ class Notate extends Component {
       </TabBarIOS.Item>
 
       <TabBarIOS.Item
+      style={styles.tabs}
       selected={this.state.selectedTab === 'notes'}
       // icon={{uri:'notations'}}
+      title="Notations"
       onPress={() => {
         this.setState({
           selectedTab: 'notes'
@@ -56,7 +60,10 @@ class Notate extends Component {
   }
 }
 
-// const styles = StyleSheet.create({
+const styles = StyleSheet.create({
+    tabs: {
+      // fontSize: 12
+    }
 //   container: {
 //     flex: 1,
 //     justifyContent: 'center',
@@ -80,6 +87,6 @@ class Notate extends Component {
 //     borderWidth: 2,
 //     backgroundColor: '#000000',
 //   },
-// });
+});
 
 AppRegistry.registerComponent('Notate', () => Notate);

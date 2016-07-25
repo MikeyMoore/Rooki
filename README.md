@@ -1,5 +1,5 @@
 # Notate
-- The chess notation app.  Can only be used in conjunction with phone stand.
+- World's first iOS app aiming to automically notate chess notation. Iteration 1 relies on the iPhone being in a fixed position for consistent image positioning.
 
 ## Members
 - Q: Mikey Moore 
@@ -13,7 +13,7 @@
 - React Native
 - Python (+ OpenCV)
 
-## Feature Goals / MVP
+## Feature Goals / MVP for Iteration 1
 - User can take pictures using phone camera of chess board from within app
 - User is prompted with an alert to take a picture of board at starting position
 - Camera notifies user of picture taken success
@@ -24,9 +24,10 @@
 - Those coordinates are translated into notation (see notation format at bottom)
 - User can view the notated output inside app
 
-## Stretch Goals
-- Notate edge cases: castling and en passant
+## Stretch Goals / Goals for future iterations
+- Notate edge cases: castling, en passant, etc.
 - User can download a text file of the finished notation
+- Notation returned after every move
 
 ## Notation Format
 - K: King, Q: Queen, B: Bishop, N: Knight, R: Rook
@@ -34,6 +35,7 @@
 - With pawns, we only say where they moved to.  So, if a pawn starts on a3 and moves to a5, that is notated as: a5
 - If a K, Q, B, N, or R take another piece (move to a square that was already occupied by another piece), we add an 'x' as well as the letter of the taken piece in between the letter of the moving piece and the square they move to.  So, if a rook starts on a3 and moves to the already occupied square a5 (occupied by a knight), we notate that as: a3RxNa5.  If the square was occupied by a bishop, we notate that as: a3RxBa5.
 - If a pawn moves to an already occupied square, let's say the a3 pawn moves to the occupied square b4 (occupied by a knight), we would notate that as: axNb4.  If a pawn on c5 moves to the occupied square d6 (occupied by a pawn), we would notate that as: cxd6.
+- Each move would begin with a number, followed by white's move, two dots, then black's move: 11.a2Ra3 .. g6Bh7
 - Our app currently cannot notate for castling or en passant.
 
 
