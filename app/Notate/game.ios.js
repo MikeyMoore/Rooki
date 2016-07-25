@@ -3,52 +3,65 @@
 import React, { Component } from 'react';
 
 import {
-	StyleSheet,
-	View,
-	Dimensions,
-	TouchableHighlight,
-	Text,
+  StyleSheet,
+  View,
+  Dimensions,
+  TouchableHighlight,
+  Text,
   CameraRoll,
 } from 'react-native';
 import Camera from 'react-native-camera';
 
 var styles = StyleSheet.create({
-	description: {
-		fontSize: 20,
-		textAlign: 'center',
-		color: "#FFFFFF"
-	},
-	container: {
-		flex: 1,
-		 justifyContent: 'center',
-		 alignItems: 'center',
-		 backgroundColor: '#123456'
-	}
+  description: {
+    fontSize: 20,
+    textAlign: 'center',
+    color: "#FFFFFF"
+  },
+  container: {
+    flex: 1,
+     justifyContent: 'center',
+     alignItems: 'center',
+     backgroundColor: '#123456'
+  }
 });
 
 class Game extends Component {
-	render() {
-		return (
-			<View style={styles.container}>
-				<Camera
+  render() {
+    return (
+      <View style={styles.container}>
+        <Camera
           style={styles.preview}
           aspect={Camera.constants.Aspect.fit}
           orientation={Camera.constants.Orientation.portrait}
           type={Camera.constants.Type.back}
           flashMode={Camera.constants.FlashMode.on} 
           captureMode={Camera.constants.CaptureMode.still}
-          captureTarget={Camera.constants.CaptureTarget.cameraRoll}
+          captureTarget={Camera.constants.CaptureTarget.disk}
           ref={(cam) => {
             this.camera = cam;
           }}>
           <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
         </Camera>
-			</View>
-		);
-	}
-	takePicture() {
-    this.camera.capture()
-      .then((data) => console.log(data))
+      </View>
+    );
+  }
+  takePicture() {
+    this.camera.capture(function(err, data) {
+      this.setState({photo: data});
+      console.log(err, data);
+      console.log('just took a picture');
+    })
+      // .then( (data) => console.log(data) )
+      .then( (data) => console.log(data) )
+      .then(fetch('http://localhost:3000/posts', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ imageData: (data) => console.log(data)})
+      }))
       .catch(err => console.error(err));
   }  
 }
