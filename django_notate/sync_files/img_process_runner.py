@@ -15,10 +15,8 @@ def getAfterCoordinates(img1,img2, new_order=-1):
 
 	# After coordinate function
 	coords = coordinates(new_order)
-	# first axis
-	print coords 
-	# second axis
-	# print coords.flatten()[1] 
+	# x axis + y axis
+	twoCoords = [coords[0][0], coords[0][1]] 
 
 def getBeforeCoordinates(img1,img2, new_order=-1):
 	# this saves as BeforeImageMove.jpg
@@ -30,7 +28,8 @@ def getBeforeCoordinates(img1,img2, new_order=-1):
 	
 	# Before coordinate function
 	coords = coordinates(new_order)
-	print coords
+	# x axis + y axis
+	twoCoords = [coords[0][0], coords[0][1]] 
 	
 
 
@@ -43,8 +42,8 @@ if __name__ == "__main__":
 	# print args
 	# These two images break the before coordinates call
 	# print "F8"
-	getBeforeCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg', args['new'])
-	getAfterCoordinates('../../IMG_0289.jpg','../../IMG_0290.jpg', args['new'])
+	# getBeforeCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg', args['new'])
+	getAfterCoordinates('../../IMG_0333.jpg','../../IMG_0334.jpg', args['new'])
 
 	# Now we need to remove the images created by OpenCV
 	# os.remove('AfterImageMove.jpg')
