@@ -111,9 +111,10 @@ def coordinates(new_order):
 			(int(rect[0][0] - 15), int(rect[0][1] - 15)),
 			cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 2)
 		# show the image
-		# cv2.imwrite("ItsAlive.jpg", image)
+		cv2.imwrite("ItsAlive.jpg", image)
+		# itsalive.show()
 		# cv2.waitKey(0)
 
 		# return (rect.astype("int"))
-		return box[0]
+		return box
 		
