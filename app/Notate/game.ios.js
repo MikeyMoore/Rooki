@@ -32,6 +32,7 @@ class Game extends Component {
       <View style={styles.container}>
         <Camera
           style={styles.preview}
+          style={{width: Dimensions.get('window').width, height: Dimensions.get('window').width}}
           aspect={Camera.constants.Aspect.fit}
           orientation={Camera.constants.Orientation.portrait}
           type={Camera.constants.Type.back}
@@ -41,7 +42,7 @@ class Game extends Component {
           ref={(cam) => {
             this.camera = cam;
           }}>
-          <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
+          <Text style={styles.capture} onPress={this.takePicture.bind(this)}></Text>
         </Camera>
       </View>
     );
@@ -68,22 +69,21 @@ class Game extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: 'black'
   },
   preview: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').width
+    alignItems: 'center'
   },
   capture: {
-    flex: 0,
+    flex: 1,
     backgroundColor: '#fff',
     borderRadius: 5,
     color: '#000',
-    margin: 130,
-    padding: 80,
+    // margin: 130,
+    // padding: 80,
     fontSize: 24,
     opacity: .09
   }
