@@ -32,6 +32,7 @@ class Game extends Component {
       <View style={styles.container}>
         <Camera
           style={styles.preview}
+          style={{width: Dimensions.get('window').width, height: Dimensions.get('window').width}}
           aspect={Camera.constants.Aspect.fit}
           orientation={Camera.constants.Orientation.portrait}
           type={Camera.constants.Type.back}
