@@ -36,14 +36,15 @@ def order_points(pts):
 	# bottom-right, and bottom-left order
 	return np.array([tl, tr, br, bl], dtype="float32")
 
-def coordinates():
+def coordinates(new_order):
     # print "made it to coordinates"
 
 	# construct the argument parse and parse the arguments
-	ap = argparse.ArgumentParser()
-	ap.add_argument("-n", "--new", type=int, default=-1,
-		help="whether or not the new order points should should be used")
-	args = vars(ap.parse_args());
+	# TODO: Remove argument parsing from here
+	#ap = argparse.ArgumentParser()
+	#ap.add_argument("-n", "--new", type=int, default=-1,
+    #		help="whether or not the new order points should should be used")
+	#args = vars(ap.parse_args());
 
     # print "made it to coordinates"
 
@@ -94,7 +95,7 @@ def coordinates():
 
 		# check to see if the new method should be used for
 		# ordering the coordinates
-		if args["new"] > 0:
+		if new_order > 0:
 			rect = perspective.order_points(box)
 
 		# show the re-ordered coordinates
