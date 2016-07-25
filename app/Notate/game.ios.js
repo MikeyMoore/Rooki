@@ -42,7 +42,7 @@ class Game extends Component {
           ref={(cam) => {
             this.camera = cam;
           }}>
-          <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
+          <Text style={styles.capture} onPress={this.takePicture.bind(this)}></Text>
         </Camera>
       </View>
     );
@@ -74,17 +74,15 @@ const styles = StyleSheet.create({
   preview: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').width
+    alignItems: 'center'
   },
   capture: {
-    flex: 0,
+    flex: 1,
     backgroundColor: '#fff',
     borderRadius: 5,
     color: '#000',
-    margin: 130,
-    padding: 80,
+    // margin: 130,
+    // padding: 80,
     fontSize: 24,
     opacity: .09
   }
