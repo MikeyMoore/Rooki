@@ -10,28 +10,31 @@ import sys
 
 def getCoordinates(img1,img2):
 	# this saves as AfterImageMove.jpg
-	after_image(img1,img2) 
+	#Image_Diff_Detection_After function call
+	after_image(img1,img2)
 
 
 	# This saves as DarkImageMove.jpg
+	#contrast.py function call
 	darken("AfterImageMove.jpg")
 
 	# coordinate function
 	# coordinates()
+	#coordinates_new.py - call
 	coorAfter = coordinates()
 	# print coordinates
 	# return coor
 	print "hey there"
-	print coorAfter 
+	print coorAfter
 
 	# this saves as BeforeImageMove.jpg
-	before_image(img1,img2)
-
-	# Now for the before coordinates
-	darken("BeforeImageMove.jpg")
-
-	coorBefore = coordinates()
-	print coorBefore
+	# before_image(img1,img2)
+	#
+	# # Now for the before coordinates
+	# darken("BeforeImageMove.jpg")
+	#
+	# coorBefore = coordinates()
+	# print coorBefore
 
 	# os.remove('AfterImageMove.jpg')
 	# os.remove('BeforeImageMove.jpg')
@@ -39,4 +42,3 @@ def getCoordinates(img1,img2):
 	# os.remove('ItsAlive.jpg')
 
 getCoordinates('../IMG_0141.jpg','../IMG_0142.jpg')
-
