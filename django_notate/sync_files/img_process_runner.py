@@ -4,14 +4,10 @@ from coordinates_new import coordinates
 import argparse
 import sys
 
-# f1=sys.argv[1]
-# f2=sys.argv[2]
-# print\
-# 	('\n',f1,'\n',f2,'\n')
-
 def getCoordinates(img1,img2, new_order=-1):
 	# this saves as AfterImageMove.jpg
 	#Image_Diff_Detection_After function call
+	print "after"
 	after_image(img1,img2)
 
 
@@ -19,24 +15,18 @@ def getCoordinates(img1,img2, new_order=-1):
 	#contrast.py function call
 	darken("../AfterImageMove.jpg")
 
-	# coordinate function
-	# coordinates()
-	#coordinates_new.py - call
-	# coorAfter = coordinates()
+	# After coordinate function
 	coordinates(new_order)
-	# print coordinates
-	# return coor
-	print "hey there"
-	# print coorAfter
 
 	# this saves as BeforeImageMove.jpg
-	# before_image(img1,img2)
-	#
-	# # Now for the before coordinates
-	# darken("BeforeImageMove.jpg")
-	#
-	# coorBefore = coordinates()
-	# print coorBefore
+	print "before"
+	before_image(img1,img2)
+	
+	# Now for the before coordinates
+	darken("BeforeImageMove.jpg")
+	
+	# Before coordinate function
+	coordinates(new_order)
 
 	# os.remove('AfterImageMove.jpg')
 	# os.remove('BeforeImageMove.jpg')
