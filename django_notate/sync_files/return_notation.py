@@ -35,10 +35,14 @@ zc = set(chess2)
 # print(unmatched)
 
 def move_piece(start_index, end_index):
+	# I added this part -Mikey
+	start_index = start_index[0]
+	end_index = end_index[0]
+
 	start_square = chess1[start_index]
 	piece = chess1[start_index][-1]
 	print(piece)
-	print(start_square_square)
+	print(start_square)
 	chess1[start_index] = chess1[start_index].replace(chess1[start_index][-1], "o")
 	print(chess1[start_index])
 	chess1[end_index] = chess1[end_index].replace(chess1[end_index][-1], piece)
@@ -46,7 +50,7 @@ def move_piece(start_index, end_index):
 	print(chess1)
 	notation = start_square + chess1[end_index][0:2]
 	notation = notation.replace(" ", "")
-	print notation
+	return notation
     
 
 # move_piece(0, 40)
