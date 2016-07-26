@@ -8,7 +8,7 @@
 
 chess1 = ["a8 R", "b8 N", "c8 B", "d8 Q", "e8 K", "f8 B", "g8 N", "h8 R",
 	"a7 P", "b7 P", "c7 P", "d7 P", "e7 P", "f7 P", "g7 P", "h7 P",
-	"a6 P", "b6 P", "c6 P", "d6 P", "e6 P", "f6 P", "g6 P", "h6 P",
+	"a6 o", "b6 o", "c6 o", "d6 o", "e6 o", "f6 o", "g6 o", "h6 o",
 	"a5 o", "b5 o", "c5 o", "d5 o", "e5 o", "f5 o", "g5 o", "h5 o",
 	"a4 o", "b4 o", "c4 o", "d4 o", "e4 o", "f4 o", "g4 o", "h4 o",
 	"a3 o", "b3 o", "c3 o", "d3 o", "e3 o", "f3 o", "g3 o", "h3 o",

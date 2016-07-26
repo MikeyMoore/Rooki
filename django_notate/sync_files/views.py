@@ -6,9 +6,18 @@ from notate_runner import run_opencv
 # Create your views here.
 def index(request):
     # getAfterCoordinates('../IMG_0141.jpg','../IMG_0142.jpg')
-    run_opencv()
+
+   
+    notation = run_opencv('../../IMG_0322.jpg','../../IMG_0323.jpg')
+
+
     # import ipdb; ipdb.set_trace()
 
     # return coordinates
 
-    return HttpResponse("Hello, world. You're at the polls index.")
+   
+    return HttpResponse(notation)
+
+# def post(request):
+
+# 	return HttpResponse("this is a post request")
