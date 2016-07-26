@@ -200,26 +200,38 @@ def grid_translate(x_coord, y_coord):
 	else:
 		return "Something is wrong"
 
-
 #8::: if x is less than 150
+# seven should probably be <270 and >150
 #7::: if x is less than 280 and greater than 130
+# six should probably be <400 and >270
 #6::: if x is less than 410 and greater than 260
+# five should probably be <540 and >400
 #5::: if x is less than 550 and greater than 390
+# four should probably be <700 and >540
 #4::: if x is less than 690 and greater than 540
 #3::: if x is less than 800 and greater than 700
+# two should probably be <950
 #2::: if x is less than 960 and greater than 800
+# one should probably be >950
 #1::: if x is less than 1200 and greater than 940
 
+# a should probably be >1350
 #a::: if y is less than 1520 and greater than 1340
+# b should probably be <1350
 #b::: if y is less than 1375 and greater than 1225
 #c::: if y is less than 1210 and greater than 1100
+# Why did d fuck up when it wasn't 940?? Oh, it needs to be >950
 #d::: if y is less than 1095 and greater than 940
+# e should probably be <950 and >810
 #e::: if y is less than 960 and greater than 805
+# f should probably be >690
 #f::: if y is less than 810 and greater than 700
+# g should probably be <690 and >555
 #g::: if y is less than 685 and greater than 550
+# h should probably be <555
 #h::: if y is less than 560 and greater than 400
 
 
 
 
-print grid_translate(1053, 1486)
+# print grid_translate(1053, 1486)
