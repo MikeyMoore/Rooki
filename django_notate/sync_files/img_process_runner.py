@@ -11,7 +11,7 @@ def getAfterCoordinates(img1,img2, new_order=-1):
 
 
 	# This saves as DarkImageMove.jpg
-	darken("../AfterImageMove.jpg")
+	darken("AfterImageMove.jpg")
 
 	# After coordinate function
 	coords = coordinates(new_order)
@@ -27,7 +27,7 @@ def getBeforeCoordinates(img1,img2, new_order=-1):
 	before_image(img1,img2)
 	
 	# This saves as DarkImageMove.jpg
-	darken("../BeforeImageMove.jpg")
+	darken("BeforeImageMove.jpg")
 	
 	# Before coordinate function
 	coords = coordinates(new_order)
@@ -44,8 +44,8 @@ if __name__ == "__main__":
 		help="whether or not the new order points should should be used")
 	args = vars(ap.parse_args())
 	
-	print getBeforeCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg', args['new'])
-	print getAfterCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg', args['new'])
+	# getBeforeCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg', args['new'])
+	getAfterCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg', args['new'])
 
 	# Now we need to remove the images created by OpenCV
 	# os.remove('AfterImageMove.jpg')
