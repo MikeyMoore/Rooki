@@ -70,7 +70,7 @@ class Game extends Component {
     })
       // .then( (data) => console.log(data) )
       .then( (data) => console.log(data) )
-      .then(fetch('http://localhost:3000/posts', {
+      .then(fetch('http://172.16.50.14:8000/sync_files', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
