@@ -1,4 +1,18 @@
+from notate_runner import run_opencv
+import sqlite3
+
+conn = sqlite3.connect('../db.sqlite3')
+c = conn.cursor()
+
 def listMoves():
+
+	# this logic saves the single move in db, 
+	# need an ImageObject.length
+	for x in range(0,2):
+   		# images should be ImageObject.first and ImageObject.second
+   		notation = run_opencv('../../IMG_0322.jpg','../../IMG_0323.jpg')
+   		# c.execute('INSERT INTO notations VALUES (?)', notation)
+    	# need logic to delete first image
 
 	# grab each notation object from database => 
 	# one notation object should look something like: 
