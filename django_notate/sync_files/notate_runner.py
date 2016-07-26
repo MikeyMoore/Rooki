@@ -14,5 +14,6 @@ beforeIndex = grid_translate(xAxisBefore, yAxisBefore)
 afterIndex = grid_translate(xAxisAfter, yAxisAfter)
 
 moveNotation = move_piece(beforeIndex, afterIndex) 
+print moveNotation
 
 
