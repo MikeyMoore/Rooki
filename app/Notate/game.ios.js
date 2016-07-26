@@ -32,7 +32,7 @@ var styles = StyleSheet.create({
 class Game extends Component {
   sendReview(){
     AlertIOS.alert(
-      'Make sure you first take a picture of the board at the starting position',
+      'Make sure you first take a picture of the board at the starting position.  Make sure white is on the right!',
       '',
       [
         {text:'gotcha', onPress: ()=> console.log('okiedokie!')}
@@ -47,7 +47,7 @@ class Game extends Component {
         <Camera
           style={styles.preview}
           style={{width: Dimensions.get('window').width, height: Dimensions.get('window').width}}
-          aspect={Camera.constants.Aspect.stretch}
+          aspect={Camera.constants.Aspect.fill}
           orientation={Camera.constants.Orientation.portrait}
           type={Camera.constants.Type.back}
           flashMode={Camera.constants.FlashMode.on} 
