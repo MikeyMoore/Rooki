@@ -12,7 +12,7 @@ def after_image(img1,img2):
 	if result2 is True:
 			print "The images are the same"
 	else:
-		cv2.imwrite("../AfterImageMove.jpg", difference2)
+		cv2.imwrite("AfterImageMove.jpg", difference2)
 		# print "the images are different"
 
 def before_image(img1,img2):
@@ -26,5 +26,5 @@ def before_image(img1,img2):
 	if result2 is True:
 			print "The images are the same"
 	else:
-		cv2.imwrite("../BeforeImageMove.jpg", difference2)
+		cv2.imwrite("BeforeImageMove.jpg", difference2)
 		# print "the images are different"

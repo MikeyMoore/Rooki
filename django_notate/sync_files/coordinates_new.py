@@ -49,7 +49,7 @@ def coordinates(new_order):
     # print "made it to coordinates"
 
 	# load our input image, convert it to grayscale, and blur it slightly
-	image = cv2.imread("../DarkImageMove.jpg")
+	image = cv2.imread("DarkImageMove.jpg")
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
