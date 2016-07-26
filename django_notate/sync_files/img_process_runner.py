@@ -33,7 +33,7 @@ def getBeforeCoordinates(img1,img2, new_order=-1):
 	twoCoords = [coords[0][0], coords[0][1]] 
 	return twoCoords
 	
-	
+
 if __name__ == "__main__":
 	ap = argparse.ArgumentParser()
 	ap.add_argument("-n", "--new", type=int, default=-1,
@@ -41,7 +41,7 @@ if __name__ == "__main__":
 	args = vars(ap.parse_args())
 	
 	print getBeforeCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg', args['new'])
-	print getAfterCoordinates('../../IMG_0333.jpg','../../IMG_0334.jpg', args['new'])
+	print getAfterCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg', args['new'])
 
 	# Now we need to remove the images created by OpenCV
 	# os.remove('AfterImageMove.jpg')
