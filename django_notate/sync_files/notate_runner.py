@@ -13,8 +13,16 @@ yAxisAfter = after_coords[1]
 beforeIndex = grid_translate(xAxisBefore, yAxisBefore)
 afterIndex = grid_translate(xAxisAfter, yAxisAfter)
 
+print "before coords"
+print before_coords
+print "after coords"
+print after_coords
+
+print "before index"
 print beforeIndex
+print "after index"
 print afterIndex
+
 moveNotation = move_piece(beforeIndex, afterIndex) 
 print moveNotation
 

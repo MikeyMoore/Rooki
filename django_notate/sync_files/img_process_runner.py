@@ -6,7 +6,7 @@ import sys
 
 def getAfterCoordinates(img1,img2, new_order=-1):
 	# this saves as AfterImageMove.jpg
-	print "after"
+	# print "after"
 	after_image(img1,img2)
 
 
@@ -21,7 +21,7 @@ def getAfterCoordinates(img1,img2, new_order=-1):
 
 def getBeforeCoordinates(img1,img2, new_order=-1):
 	# this saves as BeforeImageMove.jpg
-	print "before"
+	# print "before"
 	before_image(img1,img2)
 	
 	# This saves as DarkImageMove.jpg

@@ -41,13 +41,13 @@ def move_piece(start_index, end_index):
 
 	start_square = chess1[start_index]
 	piece = chess1[start_index][-1]
-	print(piece)
-	print(start_square)
+	# print(piece)
+	# print(start_square)
 	chess1[start_index] = chess1[start_index].replace(chess1[start_index][-1], "o")
-	print(chess1[start_index])
+	# print(chess1[start_index])
 	chess1[end_index] = chess1[end_index].replace(chess1[end_index][-1], piece)
-	print(chess1[end_index])
-	print(chess1)
+	# print(chess1[end_index])
+	# print(chess1)
 	notation = start_square + chess1[end_index][0:2]
 	notation = notation.replace(" ", "")
 	return notation
