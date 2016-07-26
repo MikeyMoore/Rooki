@@ -2,9 +2,9 @@ from img_process_runner import getAfterCoordinates, getBeforeCoordinates
 from grid import grid_translate
 from return_notation import move_piece
 
-def run_opencv():
-	before_coords = getBeforeCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg')
-	after_coords = getAfterCoordinates('../../IMG_0322.jpg','../../IMG_0323.jpg')
+def run_opencv(img1,img2):
+	before_coords = getBeforeCoordinates(img1,img2)
+	after_coords = getAfterCoordinates(img1,img2)
 
 	xAxisBefore = before_coords[0]
 	yAxisBefore = before_coords[1]
@@ -25,6 +25,6 @@ def run_opencv():
 	print afterIndex
 
 	moveNotation = move_piece(beforeIndex, afterIndex) 
-	print moveNotation
+	return moveNotation
 
 
