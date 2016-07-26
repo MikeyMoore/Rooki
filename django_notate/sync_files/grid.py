@@ -98,7 +98,7 @@ def grid_translate(x_coord, y_coord):
 	elif(x < 280 and x > 130 and y < 1095 and y > 940):
 		#"d7"
 		return [11]
-	elif(x < 150 and y < 1095 and y > 940):
+	elif(x < 150 and y < 1095 and y > 945):
 		#"d8"
 		return [3]
 	elif(x < 1200 and x > 940 and y < 960 and y > 805):
