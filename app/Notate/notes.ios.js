@@ -25,11 +25,13 @@ var styles = StyleSheet.create({
 class Notes extends Component {
 	render() {
 		return (
-			<View style={styles.container}>
-			<Text style={styles.description}>
-			This is where the notations will be shown
-			</Text>
-			</View>
+			<ScrollView style={styles.container}>
+				<Text style={styles.description}>
+					e3..e6
+					Bc4..Qg5
+					Bc1xQg5
+				</Text>
+			</ScrollView>
 		);
 	}
 }
