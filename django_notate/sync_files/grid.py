@@ -222,4 +222,4 @@ def grid_translate(x_coord, y_coord):
 
 
 
-print grid_translate(1053, 1486)
+# print grid_translate(1053, 1486)
