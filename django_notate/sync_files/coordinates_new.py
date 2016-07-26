@@ -49,7 +49,7 @@ def coordinates(new_order):
     # print "made it to coordinates"
 
 	# load our input image, convert it to grayscale, and blur it slightly
-	image = cv2.imread("../DarkImageMove.jpg")
+	image = cv2.imread("DarkImageMove.jpg")
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
@@ -111,8 +111,10 @@ def coordinates(new_order):
 			(int(rect[0][0] - 15), int(rect[0][1] - 15)),
 			cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 2)
 		# show the image
-		# cv2.imwrite("ItsAlive.jpg", image)
+		cv2.imwrite("ItsAlive.jpg", image)
+		# itsalive.show()
 		# cv2.waitKey(0)
 
 		# return (rect.astype("int"))
-		print box
+		return box
+		

@@ -8,6 +8,6 @@ def darken(lightImage):
 	# print "I'm about to show image"
 	# image2.show()
 	# print "I'm about to write image"
-	image2.save("../DarkImageMove.jpg")
+	image2.save("DarkImageMove.jpg")
 	# contrast.enhance().show()
 	# print "finished the contrast statement"

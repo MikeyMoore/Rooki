@@ -8,7 +8,7 @@ import {
   Dimensions,
   Text,
   View,
-  TouchableHighlight,
+  TouchableHighlight
 } from 'react-native'
 
 import Camera from 'react-native-camera';

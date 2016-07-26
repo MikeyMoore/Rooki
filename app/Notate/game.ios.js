@@ -32,7 +32,7 @@ var styles = StyleSheet.create({
 class Game extends Component {
   sendReview(){
     AlertIOS.alert(
-      'Make sure you first take a picture of the board at the starting position',
+      'Make sure you first take a picture of the board at the starting position.  Make sure white is on the right!',
       '',
       [
         {text:'gotcha', onPress: ()=> console.log('okiedokie!')}
@@ -47,7 +47,7 @@ class Game extends Component {
         <Camera
           style={styles.preview}
           style={{width: Dimensions.get('window').width, height: Dimensions.get('window').width}}
-          aspect={Camera.constants.Aspect.stretch}
+          aspect={Camera.constants.Aspect.fill}
           orientation={Camera.constants.Orientation.portrait}
           type={Camera.constants.Type.back}
           flashMode={Camera.constants.FlashMode.on} 
@@ -70,7 +70,8 @@ class Game extends Component {
     })
       // .then( (data) => console.log(data) )
       .then( (data) => console.log(data) )
-      .then(fetch('http://172.16.50.14:8000/sync_files', {
+
+      .then(fetch('http://172.16.50.140:8000/sync_files', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
