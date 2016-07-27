@@ -69,6 +69,7 @@ class Game extends Component {
       console.log('just took a picture');
     })
       .then( (data) => console.log(data) )
+      // .then(fetch('http://172.16.50.140:3000/sync_files/list/', {
       .then(fetch('http://localhost:3000/polls/', {
         method: 'POST',
         headers: {
@@ -80,7 +81,7 @@ class Game extends Component {
       .catch(err => console.error(err));
   }  
 
-  // registerTippee() {
+  // takePicture() {
   //    var that = this
   //    fetch("https://tiptap-api.herokuapp.com/tippees", {
   //      method: "POST",
@@ -96,7 +97,8 @@ class Game extends Component {
 
   endGame() {
     var that = this;
-    fetch("http://localhost:3000/polls/", {method: "GET"})
+    // fetch("http://172.16.50.140:3000/sync_files", {method: "GET"})
+    fetch("http://localhost:3000/polls", {method: "GET"})
     .then((response) => response.json())
     // .then((responseData) => {
     //   that.setState({firstName: responseData[0].first_name})
