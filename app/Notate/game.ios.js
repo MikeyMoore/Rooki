@@ -69,8 +69,8 @@ class Game extends Component {
       console.log('just took a picture');
     })
       .then( (data) => console.log(data) )
-      // .then(fetch('http://172.16.50.140:3000/sync_files/list/', {
-      .then(fetch('http://localhost:3000/polls/', {
+      .then(fetch('http://172.16.50.140:3000/sync_files/list/', {
+      // .then(fetch('http://localhost:3000/polls/', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -97,8 +97,8 @@ class Game extends Component {
 
   endGame() {
     var that = this;
-    // fetch("http://172.16.50.140:3000/sync_files", {method: "GET"})
-    fetch("http://localhost:3000/polls", {method: "GET"})
+    fetch("http://172.16.50.140:3000/sync_files", {method: "GET"})
+    // fetch("http://localhost:3000/polls", {method: "GET"})
     .then((response) => response.json())
     // .then((responseData) => {
     //   that.setState({firstName: responseData[0].first_name})
