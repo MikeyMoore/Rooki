@@ -29,7 +29,8 @@ class Notes extends Component {
 	render() {
 		return (
 			<WebView
-				source={{uri: 'http://172.16.50.140:3000/sync_files'}}
+				// source={{uri: 'http://172.16.50.140:3000/sync_files'}}
+				source={{uri: 'https://github.com/facebook/react-native'}}
 				style={{marginTop: 20}}
 			/>
 		);
