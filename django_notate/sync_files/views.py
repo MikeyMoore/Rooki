@@ -45,6 +45,11 @@ def index(request):
 			# We delete only the first image
 			imageFirst.delete()
 
+		# This clears the database of that last image
+		# elif(Document.objects.count() != 1):
+		# 	imageFirst = Document.objects.get(id=increaseIndex)
+		# 	imageFirst.delete()
+
 	# How many notations objects do we need to go through?
 	notationCount = Notations.objects.count()
 
@@ -106,7 +111,11 @@ def index(request):
 
 	# This prints the finalNotation (list of all notations) 
 	# into the web browser 
-	return HttpResponse(finalNotation)
+	return render(
+		request,
+		'finalNotations.html', 
+		{'finalNotation': finalNotation}
+		)
 
 def list(request):
     # Handle file upload
@@ -130,7 +139,6 @@ def list(request):
         'list.html',
         {'documents': documents, 'form': form}
     )
-    # return HttpResponse("yippee")
 
 
 
