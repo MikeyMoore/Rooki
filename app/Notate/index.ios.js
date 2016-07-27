@@ -6,7 +6,6 @@ import {
   TabBarIOS,
   StyleSheet,
   Dimensions,
-  ListView,
   Text,
   View,
   TouchableHighlight
@@ -16,7 +15,6 @@ import Camera from 'react-native-camera';
 
 var Game = require('./game.ios');
 var Notes = require('./notes.ios');
-var Load = require('./load.ios');
 
 class Notate extends Component {
   constructor(props) {
@@ -41,19 +39,6 @@ class Notate extends Component {
         });
       }}>
       <Game />
-      </TabBarIOS.Item>
-
-      <TabBarIOS.Item
-      style={styles.tabs}
-      selected={this.state.selectedTab === 'load'}
-      // icon={{uri:'notations'}}
-      title="Upload"
-      onPress={() => {
-        this.setState({
-          selectedTab: 'load'
-        });
-      }}>
-      <Load />
       </TabBarIOS.Item>
 
       <TabBarIOS.Item
