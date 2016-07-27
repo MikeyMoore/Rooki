@@ -6,6 +6,7 @@ import {
   TabBarIOS,
   StyleSheet,
   Dimensions,
+  ListView,
   Text,
   View,
   TouchableHighlight
@@ -20,7 +21,7 @@ class Notate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'game'
+      selectedTab: 'notes'
     };
   }
 
