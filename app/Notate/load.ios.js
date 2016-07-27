@@ -9,6 +9,7 @@ import {
 	ScrollView,
 	View,
 	Text,
+	CameraRoll
 } from 'react-native';
 
 var styles = StyleSheet.create({
@@ -22,6 +23,12 @@ var styles = StyleSheet.create({
 		 justifyContent: 'center',
 		 alignItems: 'center',
 		 backgroundColor: '#234123'
+	},
+	webview: {
+		marginTop: 20,
+		textAlign: 'center',
+		fontSize: 20,
+		alignItems: 'center'
 	}
 });
 
@@ -29,9 +36,9 @@ class Load extends Component {
 	render() {
 		return (
 			<WebView
-				// source={{uri: 'http://172.16.50.140:3000/sync_files/list'}}
-				source={{uri: 'https://github.com/facebook/react-native'}}
-				style={{marginTop: 20}}
+				style={styles.webview}
+				source={{uri: 'http://172.16.50.140:3000/sync_files/list'}}
+				// source={{uri: 'https://github.com/facebook/react-native'}}
 			/>
 		);
 	}
