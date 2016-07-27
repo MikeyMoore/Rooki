@@ -10,10 +10,10 @@ def after_image(img1,img2):
 	result2 = not np.any(difference2)
 
 	if result2 is True:
-			print "The images are the same"
+			print "The images are the same in after"
 	else:
 		cv2.imwrite("AfterImageMove.jpg", difference2)
-		# print "the images are different"
+		print "the images are different in after"
 
 def before_image(img1,img2):
 	image1 = cv2.imread(img2)#second image
@@ -24,7 +24,7 @@ def before_image(img1,img2):
 	result2 = not np.any(difference2)
 
 	if result2 is True:
-			print "The images are the same"
+			print "The images are the same in before"
 	else:
 		cv2.imwrite("BeforeImageMove.jpg", difference2)
-		# print "the images are different"
+		print "the images are different in before"
