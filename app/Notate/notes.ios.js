@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 
 import {
 	StyleSheet,
+	ListView,
+	WebView,
+	ScrollView,
 	View,
 	Text,
 } from 'react-native';
@@ -25,13 +28,10 @@ var styles = StyleSheet.create({
 class Notes extends Component {
 	render() {
 		return (
-			<ScrollView style={styles.container}>
-				<Text style={styles.description}>
-					e3..e6
-					Bc4..Qg5
-					Bc1xQg5
-				</Text>
-			</ScrollView>
+			<WebView
+				source={{uri: 'http://172.16.50.140:3000/sync_files'}}
+				style={{marginTop: 20}}
+			/>
 		);
 	}
 }
