@@ -25,7 +25,7 @@
 - User can view the notated output inside app
 
 ## Stretch Goals / Goals for future iterations
-- Notate edge cases: castling, en passant, etc.
+- Notate edge cases: castling, en passant, check or checkmate.
 - User can download a text file of the finished notation
 - Notation returned after every move
 
@@ -36,7 +36,7 @@
 - If a K, Q, B, N, or R take another piece (move to a square that was already occupied by another piece), we add an 'x' as well as the letter of the taken piece in between the letter of the moving piece and the square they move to.  So, if a rook starts on a3 and moves to the already occupied square a5 (occupied by a knight), we notate that as: a3RxNa5.  If the square was occupied by a bishop, we notate that as: a3RxBa5.
 - If a pawn moves to an already occupied square, let's say the a3 pawn moves to the occupied square b4 (occupied by a knight), we would notate that as: axNb4.  If a pawn on c5 moves to the occupied square d6 (occupied by a pawn), we would notate that as: cxd6.
 - Each move would begin with a number, followed by white's move, two dots, then black's move: 11.a2Ra3 .. g6Bh7
-- Our app currently cannot notate for castling or en passant.
+- Our app currently cannot notate for castling, en passant, getting put in check, or checkmating.
 
 
 
