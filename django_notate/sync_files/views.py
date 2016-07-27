@@ -25,17 +25,19 @@ def index(request):
 		if (Document.objects.count() != 1):
 			# This finds the first image to compare
 			imageFirst = Document.objects.get(id=increaseIndex)
-			print "image one"
-			print imageFirst.docfile
 			increaseIndex += 1
+			# print open(imageFirst.docfile.url, 'rb')
+			imageFirstPath = imageFirst.docfile.url
+			imageFirstPath = imageFirstPath.replace("/media", "media")
 			
 			# This finds the second image to compare
 			imageSecond = Document.objects.get(id=(increaseIndex))
-			print "image two"
-			print imageSecond.docfile
+			imageSecondPath = imageSecond.docfile.url
+			imageSecondPath = imageSecondPath.replace("/media", "media")
 
 			# Now we run the two images through OpenCV and return a notation
-			notation = run_opencv(imageFirst.docfile.url, imageSecond.docfile.url)
+			notation = run_opencv(imageFirstPath, imageSecondPath)
+
 			# We save that notation into the database
 			newNotation = Notations(name=notation)
 			newNotation.save()
