@@ -1,22 +1,23 @@
 from notate_runner import run_opencv
 import sqlite3
+from sync_files.models import Document
 
 conn = sqlite3.connect('../db.sqlite3', check_same_thread = False)
 c = conn.cursor()
 
 def listMoves():
-	imageCount = c.execute('SELECT COUNT(*) FROM document')
+	imageCount = c.execute('SELECT COUNT(*) FROM sync_files_document')
 	# this logic saves the single move in db, 
 	# need an ImageObject.length
 	for x in range(1,imageCount):
    		# images should be ImageObject.first and ImageObject.second
    		# notation = run_opencv('../../IMG_0322.jpg','../../IMG_0323.jpg')
-   		imageFirst = c.execute('SELECT * FROM document WHERE ID=(?)', [x])
-   		imageSecond = c.execute('SELECT * FROM document WHERE id=(?)', [x+1])
+   		imageFirst = c.execute('SELECT * FROM sync_files_document WHERE ID=(?)', [x])
+   		imageSecond = c.execute('SELECT * FROM sync_files_document WHERE id=(?)', [x+1])
    		notation = run_opencv(imageFirst, imageSecond)
    		c.execute('INSERT INTO sync_files_notations VALUES (?,?)', [x, notation])
     	# need logic to delete first image
-   		c.execute('DELETE FROM document WHERE ID=(?)', x)
+   		c.execute('DELETE FROM sync_files_document WHERE ID=(?)', x)
 
 	# grab each notation object from database => 
 	# one notation object should look something like: 
