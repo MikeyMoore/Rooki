@@ -50,4 +50,4 @@ def move_piece(start_index, end_index):
 		print notation
 	else:print "Oops"
 	
-move_piece(2, 9)
+# move_piece(2, 9)
