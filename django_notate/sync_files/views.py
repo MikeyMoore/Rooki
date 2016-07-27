@@ -71,16 +71,19 @@ def index(request):
 	# from white's move to black's move, starting with white's move
 	whiteOrBlack = "white"
 
+	# This sets up the move number
+	moveNumber = 1
+
 	for y in range(notationIndexFirst,(notationIndexFirst + notationCount)):
 
 		# Stops when there are no more notations
 		if (Notations.objects.count() != 0):
 			# This prints out which move it is
-			print "x"
-			print x
+			print "y"
+			print y
 			print "notationIndexFirst"
 			print notationIndexFirst
-			moveNumber = str(notationIndexFirst - (notationIndexFirst-1)) + ". "
+			# moveNumber = str(indexForNotation - (notationIndexFirst-1)) + ". "
 			
 			# notates for White's move
 			if(whiteOrBlack == "white" and Notations.objects.count() != 0):
@@ -95,7 +98,7 @@ def index(request):
 				print moveWhite
 
 				# Saves white's move
-				finalNotation += str(moveNumber) + str(moveWhite)
+				finalNotation += str(moveNumber) + "." + str(moveWhite)
 				# Deletes the notation from the database
 				moveWhite.delete()
 
@@ -115,6 +118,9 @@ def index(request):
 				finalNotation += " .. " + str(moveBlack) + "\n"
 				# Deletes the notation from the database 
 				moveBlack.delete()
+
+				# This increase the move number
+				moveNumber += 1
 
 	# This prints the finalNotation (list of all notations) 
 	# into the web browser 
