@@ -19,23 +19,17 @@ def index(request):
 	indexFirst = Document.objects.first().id
 	# This next variable is one we increase within for loop
 	increaseIndex = indexFirst
-	print "increaseIndex"
-	print increaseIndex
 
 	for x in range(indexFirst,(indexFirst + imageCount)):
 		# We cannot run this with only one image file left
 		if (Document.objects.count() != 1):
 			# This finds the first image to compare
-			print "increaseIndex"
-			print increaseIndex
 			imageFirst = Document.objects.get(id=increaseIndex)
 			print "image one"
 			print imageFirst.docfile
 			increaseIndex += 1
 			
 			# This finds the second image to compare
-			print "increaseIndex"
-			print increaseIndex
 			imageSecond = Document.objects.get(id=(increaseIndex))
 			print "image two"
 			print imageSecond.docfile
@@ -78,12 +72,6 @@ def index(request):
 
 		# Stops when there are no more notations
 		if (Notations.objects.count() != 0):
-			# This prints out which move it is
-			print "y"
-			print y
-			print "notationIndexFirst"
-			print notationIndexFirst
-			# moveNumber = str(indexForNotation - (notationIndexFirst-1)) + ". "
 			
 			# notates for White's move
 			if(whiteOrBlack == "white" and Notations.objects.count() != 0):
@@ -92,10 +80,6 @@ def index(request):
 				# changes variable so that the next notation is black's
 				whiteOrBlack = "black"
 				indexForNotation +=1
-				print "indexForNotation"
-				print indexForNotation
-				print "moveWhite"
-				print moveWhite
 
 				# Saves white's move
 				finalNotation += str(moveNumber) + "." + str(moveWhite)
@@ -109,10 +93,6 @@ def index(request):
 				# changes variable so that the next notation is whites's
 				whiteOrBlack = "white"
 				indexForNotation +=1
-				print "indexForNotation"
-				print indexForNotation
-				print "moveBlack"
-				print moveBlack
 
 				# Saves black's move
 				finalNotation += " .. " + str(moveBlack) + "\n"
