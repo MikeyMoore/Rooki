@@ -22,16 +22,22 @@ var styles = StyleSheet.create({
 		 justifyContent: 'center',
 		 alignItems: 'center',
 		 backgroundColor: '#234123'
+	},
+	webview: {
+		marginTop: 20,
+		textAlign: 'center',
+		fontSize: 20,
+		alignItems: 'center'
 	}
 });
 
 class Notes extends Component {
 	render() {
 		return (
-			<WebView
-				// source={{uri: 'http://172.16.50.140:3000/sync_files'}}
-				source={{uri: 'https://github.com/facebook/react-native'}}
-				style={{marginTop: 20}}
+			<WebView 
+				style={styles.webview}
+				source={{uri: 'http://172.16.50.140:3000/sync_files'}}
+				// source={{uri: 'https://github.com/facebook/react-native'}}
 			/>
 		);
 	}
