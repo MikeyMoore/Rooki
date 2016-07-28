@@ -9,6 +9,7 @@ import {
 	ScrollView,
 	View,
 	Text,
+	CameraRoll
 } from 'react-native';
 
 var styles = StyleSheet.create({
@@ -31,16 +32,16 @@ var styles = StyleSheet.create({
 	}
 });
 
-class Notes extends Component {
+class Load extends Component {
 	render() {
 		return (
-			<WebView 
+			<WebView
 				style={styles.webview}
-				source={{uri: 'http://172.16.50.140:3000/sync_files'}}
+				source={{uri: 'http://172.16.50.140:3000/sync_files/list'}}
 				// source={{uri: 'https://github.com/facebook/react-native'}}
 			/>
 		);
 	}
 }
 
-module.exports = Notes;
+module.exports = Load;
