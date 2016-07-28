@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Your Game</title>
-    </head>
+   <head>
+       <meta charset="utf-8">
+       <title>Your Game</title>
+       <style>
+           .notation-list{font-family: "bookman old style"; border-style: dotted; font-size: 150%; padding: 25px; margin: auto; }
+           h1{font-family: "bookman old style"; text-align: center }
+       </style>
+   </head>
 
-    <body>
-	{% if finalNotation %}
-		{{ finalNotation }}
-	{% else %}
-		<h1>Rooki - play a game!</h1>
-	{% endif %}
-	</body>
+   <body>
+   <h1>Your game's notation</h1>
+    {% if finalNotation %}
+    <div class="notation-list">
+        <p>{{ finalNotation }}</p>
+    </div>
+    {% else %}
+        <h1>Rooki - play a game!</h1>
+    {% endif %}
+    </body>
 </html>
