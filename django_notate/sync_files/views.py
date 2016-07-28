@@ -11,107 +11,116 @@ from sync_files.models import Document, Notations
 import sqlite3
 
 def index(request):
-	# How many images did user upload?
-	# imageCount = Document.objects.count()
 
-	# # Since deletion of previous images changes the first ID, 
-	# # This finds the first image in the database
-	# indexFirst = Document.objects.first().id
-	# # This next variable is one we increase within for loop
-	# increaseIndex = indexFirst
+	finalNotation = "1. a3Rd7 2. a4Kd3 3. h4QxNf7 4. d3e5 5. a3Rd7 6. a4Kd3"
 
-	# for x in range(indexFirst,(indexFirst + imageCount)):
-	# 	# We cannot run this with only one image file left
-	# 	if (Document.objects.count() != 1):
-	# 		# This finds the first image to compare
-	# 		imageFirst = Document.objects.get(id=increaseIndex)
-	# 		increaseIndex += 1
-	# 		# print open(imageFirst.docfile.url, 'rb')
-	# 		imageFirstPath = imageFirst.docfile.url
-	# 		imageFirstPath = imageFirstPath.replace("/media", "media")
-			
-	# 		# This finds the second image to compare
-	# 		imageSecond = Document.objects.get(id=(increaseIndex))
-	# 		imageSecondPath = imageSecond.docfile.url
-	# 		imageSecondPath = imageSecondPath.replace("/media", "media")
+	# # finalNotation = "Rookie - Play a game!"
 
-	# 		# Now we run the two images through OpenCV and return a notation
-	# 		notation = run_opencv(imageFirstPath, imageSecondPath)
+	# # This makes sure the web view doesn't break without first
+	# # Uploading files
+	# if (Document.objects.count() != 0):
+	# 	# How many images did user upload?
+	# 	imageCount = Document.objects.count()
 
-	# 		# We save that notation into the database
-	# 		newNotation = Notations(name=notation)
-	# 		newNotation.save()
+	# 	# Since deletion of previous images changes the first ID, 
+	# 	# This finds the first image in the database
+	# 	indexFirst = Document.objects.first().id
+	# 	# This next variable is one we increase within for loop
+	# 	increaseIndex = indexFirst
 
-	# 		# We delete only the first image
-	# 		imageFirst.delete()
+	# 	for x in range(indexFirst,(indexFirst + imageCount)):
+	# 		# We cannot run this with only one image file left
+	# 		if (Document.objects.count() != 1):
+	# 			# This finds the first image to compare
+	# 			imageFirst = Document.objects.get(id=increaseIndex)
+	# 			increaseIndex += 1
+	# 			# print open(imageFirst.docfile.url, 'rb')
+	# 			imageFirstPath = imageFirst.docfile.url
+	# 			imageFirstPath = imageFirstPath.replace("/media", "media")
+				
+	# 			# This finds the second image to compare
+	# 			imageSecond = Document.objects.get(id=(increaseIndex))
+	# 			imageSecondPath = imageSecond.docfile.url
+	# 			imageSecondPath = imageSecondPath.replace("/media", "media")
 
-	# 	# This clears the database of that last image
-	# 	# elif(Document.objects.count() != 1):
-	# 	# 	imageFirst = Document.objects.get(id=increaseIndex)
-	# 	# 	imageFirst.delete()
+	# 			# Now we run the two images through OpenCV and return a notation
+	# 			notation = run_opencv(imageFirstPath, imageSecondPath)
 
-	# # How many notations objects do we need to go through?
-	# notationCount = Notations.objects.count()
+	# 			# We save that notation into the database
+	# 			newNotation = Notations(name=notation)
+	# 			newNotation.save()
 
-	# # Since deletion of previous notations changes the first ID, 
-	# # This finds the first notation in the database
-	# notationIndexFirst = Notations.objects.first().id
-	# # This next variable is one we increase within for loop
-	# indexForNotation = notationIndexFirst
+	# 			# We delete only the first image
+	# 			imageFirst.delete()
 
-	# # These variable save each instance of notation outside of 
-	# # the loop so we can constanly overwrite them
-	# moveWhite = ""
-	# moveBlack = ""
+	# 		# This clears the database of that last image
+	# 		elif(Document.objects.count() == 1):
+	# 			imageFirst = Document.objects.get(id=increaseIndex)
+	# 			imageFirst.delete()
 
-	# # This variable stores the entire list of notations so 
-	# # they aren't overwritten by the for loop
-	# finalNotation = ""
+	# 	if (Notations.objects.count() != 0):		
+	# 		# How many notations objects do we need to go through?
+	# 		notationCount = Notations.objects.count()
 
-	# # This gets modified each time we go through the for loop
-	# # from white's move to black's move, starting with white's move
-	# whiteOrBlack = "white"
+	# 		# Since deletion of previous notations changes the first ID, 
+	# 		# This finds the first notation in the database
+	# 		notationIndexFirst = Notations.objects.first().id
+	# 		# This next variable is one we increase within for loop
+	# 		indexForNotation = notationIndexFirst
 
-	# # This sets up the move number
-	# moveNumber = 1
+	# 		# These variable save each instance of notation outside of 
+	# 		# the loop so we can constanly overwrite them
+	# 		moveWhite = ""
+	# 		moveBlack = ""
 
-	# for y in range(notationIndexFirst,(notationIndexFirst + notationCount)):
+	# 		# This variable stores the entire list of notations so 
+	# 		# they aren't overwritten by the for loop
+	# 		finalNotation = ""
 
-	# 	# Stops when there are no more notations
-	# 	if (Notations.objects.count() != 0):
-			
-	# 		# notates for White's move
-	# 		if(whiteOrBlack == "white" and Notations.objects.count() != 0):
-	# 			moveWhite = Notations.objects.get(id=indexForNotation)
+	# 		# This gets modified each time we go through the for loop
+	# 		# from white's move to black's move, starting with white's move
+	# 		whiteOrBlack = "white"
 
-	# 			# changes variable so that the next notation is black's
-	# 			whiteOrBlack = "black"
-	# 			indexForNotation +=1
+	# 		# This sets up the move number
+	# 		moveNumber = 1
 
-	# 			# Saves white's move
-	# 			finalNotation += str(moveNumber) + "." + str(moveWhite)
-	# 			# Deletes the notation from the database
-	# 			moveWhite.delete()
+	# 		for y in range(notationIndexFirst,(notationIndexFirst + notationCount)):
 
-	# 		# notates for Blacks's move
-	# 		elif(whiteOrBlack == "black" and Notations.objects.count() != 0):
-	# 			moveBlack =  Notations.objects.get(id=indexForNotation)
+	# 			# Stops when there are no more notations
+	# 			if (Notations.objects.count() != 0):
+					
+	# 				# notates for White's move
+	# 				if(whiteOrBlack == "white" and Notations.objects.count() != 0):
+	# 					moveWhite = Notations.objects.get(id=indexForNotation)
 
-	# 			# changes variable so that the next notation is whites's
-	# 			whiteOrBlack = "white"
-	# 			indexForNotation +=1
+	# 					# changes variable so that the next notation is black's
+	# 					whiteOrBlack = "black"
+	# 					indexForNotation +=1
 
-	# 			# Saves black's move
-	# 			finalNotation += " .. " + str(moveBlack) + "\n"
-	# 			# Deletes the notation from the database 
-	# 			moveBlack.delete()
+	# 					# Saves white's move
+	# 					finalNotation += str(moveNumber) + "." + str(moveWhite)
+	# 					# Deletes the notation from the database
+	# 					moveWhite.delete()
 
-	# 			# This increase the move number
-	# 			moveNumber += 1
+	# 				# notates for Blacks's move
+	# 				elif(whiteOrBlack == "black" and Notations.objects.count() != 0):
+	# 					moveBlack =  Notations.objects.get(id=indexForNotation)
+
+	# 					# changes variable so that the next notation is whites's
+	# 					whiteOrBlack = "white"
+	# 					indexForNotation +=1
+
+	# 					# Saves black's move
+	# 					finalNotation += " .. " + str(moveBlack) + "\n"
+	# 					# Deletes the notation from the database 
+	# 					moveBlack.delete()
+
+	# 					# This increase the move number
+	# 					moveNumber += 1
 
 	# # This prints the finalNotation (list of all notations) 
 	# # into the web browser 
-	finalNotation = "1. a3Rd7 2. a4Kd3 3. h4QxNf7 4. d3e5 5. a3Rd7 6. a4Kd3"
+
 	return render(
 		request,
 		'finalNotations.html', 
@@ -140,6 +149,7 @@ def list(request):
         'list.html',
         {'documents': documents, 'form': form}
     )
+
 
 
 
