@@ -77,76 +77,76 @@ def grid_translate(x_coord, y_coord):
 	elif(x < 150 and y < 1210 and y > 1100):
 		#"c8"
 		return [2]
-	elif(x < 1200 and x > 950 and y < 1095 and y > 950):
+	elif(x < 1200 and x > 950 and y < 1095 and y > 965):
 		#"d1"
 		return [59]
-	elif(x < 950 and x > 800 and y < 1095 and y > 950):
+	elif(x < 950 and x > 800 and y < 1095 and y > 965):
 		#"d2"
 		return [51]
-	elif(x < 800 and x > 700 and y < 1095 and y > 950):
+	elif(x < 800 and x > 700 and y < 1095 and y > 965):
 		#"d3"
 		return [43]
-	elif(x < 700 and x > 540 and y < 1095 and y > 950):
+	elif(x < 700 and x > 540 and y < 1095 and y > 965):
 		#"d4"
 		return [35]
-	elif(x < 540 and x > 400 and y < 1095 and y > 950):
+	elif(x < 540 and x > 400 and y < 1095 and y > 965):
 		#"d5"
 		return [27]
-	elif(x < 400 and x > 270 and y < 1095 and y > 950):
+	elif(x < 400 and x > 270 and y < 1095 and y > 965):
 		#"d6"
 		return [19]
-	elif(x < 270 and x > 150 and y < 1095 and y > 950):
+	elif(x < 270 and x > 150 and y < 1095 and y > 965):
 		#"d7"
 		return [11]
-	elif(x < 150 and y < 1095 and y > 950):
+	elif(x < 150 and y < 1095 and y > 965):
 		#"d8"
 		return [3]
-	elif(x < 1200 and x > 950 and y < 950 and y > 810):
+	elif(x < 1200 and x > 950 and y < 965 and y > 835):
 		#"e1"
 		return [60]
-	elif(x < 950 and x > 800 and y < 950 and y > 810):
+	elif(x < 950 and x > 800 and y < 965 and y > 835):
 		#"e2"
 		return [52]
-	elif(x < 800 and x > 700 and y < 950 and y > 810):
+	elif(x < 800 and x > 700 and y < 965 and y > 835):
 		#"e3"
 		return [44]
-	elif(x < 700 and x > 540 and y < 950 and y > 810):
+	elif(x < 700 and x > 540 and y < 965 and y > 835):
 		#"e4"
 		return [36]
-	elif(x < 540 and x > 400 and y < 950 and y > 810):
+	elif(x < 540 and x > 400 and y < 965 and y > 835):
 		#"e5"
 		return [28]
-	elif(x < 400 and x > 270 and y < 950 and y > 810):
+	elif(x < 400 and x > 270 and y < 965 and y > 835):
 		#"e6"
 		return [20]
-	elif(x < 270 and x > 150 and y < 950 and y > 810):
+	elif(x < 270 and x > 150 and y < 965 and y > 835):
 		#"e7"
 		return [12]
-	elif(x < 150 and y < 950 and y > 810):
+	elif(x < 150 and y < 965 and y > 835):
 		#"e8"
 		return [4]
-	elif(x < 1200 and x > 950 and y < 810 and y > 690):
+	elif(x < 1200 and x > 950 and y < 835 and y > 690):
 		#"f1"
 		return [61]
-	elif(x < 950 and x > 800 and y < 810 and y > 690):
+	elif(x < 950 and x > 800 and y < 835 and y > 690):
 		#"f2"
 		return [53]
-	elif(x < 800 and x > 700 and y < 810 and y > 690):
+	elif(x < 800 and x > 700 and y < 835 and y > 690):
 		#"f3"
 		return [45]
-	elif(x < 700 and x > 540 and y < 810 and y > 690):
+	elif(x < 700 and x > 540 and y < 835 and y > 690):
 		#"f4"
 		return [37]
-	elif(x < 540 and x > 400 and y < 810 and y > 690):
+	elif(x < 540 and x > 400 and y < 835 and y > 690):
 		#"f5"
 		return [29]
-	elif(x < 400 and x > 270 and y < 810 and y > 690):
+	elif(x < 400 and x > 270 and y < 835 and y > 690):
 		#"f6"
 		return [21]
-	elif(x < 270 and x > 150 and y < 810 and y > 690):
+	elif(x < 270 and x > 150 and y < 835 and y > 690):
 		#"f7"
 		return [13]
-	elif(x < 150 and y < 810 and y > 690):
+	elif(x < 150 and y < 835 and y > 690):
 		#"f8"
 		return [5]
 	elif(x < 1200 and x > 950 and y < 690 and y > 555):
