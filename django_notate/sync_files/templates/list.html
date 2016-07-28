@@ -2,7 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Minimal Django File Upload Example</title>
+        <title>Notate (Rooki)</title>
+        <style>
+           .notation-list{font-family: "bookman old style"; border-style: dotted; font-size: 150%; padding: 25px; margin: auto; }
+           p{font-family: "bookman old style"; text-align: center }
+       </style>
     </head>
 
     <body>
@@ -10,7 +14,7 @@
         {% if documents %}
             <ul>
                 {% for document in documents %}
-                    <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
+                    <li>{{ document.docfile.name }}</li>
                 {% endfor %}
             </ul>
         {% else %}
@@ -18,6 +22,7 @@
         {% endif %}
 
         <!-- Upload form. Note enctype attribute! -->
+        <div class="notation-list">
         <form action="{% url "list" %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <p>{{ form.non_field_errors }}</p>
@@ -31,6 +36,7 @@
 
             <p><input type="submit" value="Upload"/></p>
         </form>
+        </div>
     </body>
 
 </html>
