@@ -12,6 +12,11 @@
 - We have chosen a simple color pallete consisting largely of blues and greys. 
 -We started using a simple black and white theme white dark green accents, reminscent of our chess set and the green velvet underneath the pieces. We soon realized that our design looked like it was from an early 2000s webpage, and the design was ditched for something less offensive to the eyes.
 
+## Web Application vs. iOS Application
+- We aimed to create the common color palette so that we could standardize the general appears of the web page and the iOS application.
+- It was not in our original design to even have a web page, but after realizing that connecting our React Native frontend to our Django backend would be more of an endeavor than we had anticipated we created a web application with Django.
+- In future iterations, our design will not include a web application as we anticipate to connect our frontent and backend rather soon.
+
 ## Wireframe Iteration 1
 ![Camera Page](./Camera_Page_Wireframe.png)
 ![Notation Page](./Notation_Page_Wireframe.png)
