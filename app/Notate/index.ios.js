@@ -31,7 +31,6 @@ class Notate extends Component {
       <TabBarIOS selectedTab={this.state.selectedTab}>
 
       <TabBarIOS.Item
-      style={styles.tabs}
       selected={this.state.selectedTab === 'game'}
       // icon={{uri:'gameplay'}}
       title='Game'
@@ -44,7 +43,6 @@ class Notate extends Component {
       </TabBarIOS.Item>
 
       <TabBarIOS.Item
-      style={styles.tabs}
       selected={this.state.selectedTab === 'load'}
       // icon={{uri:'notations'}}
       title="Upload"
@@ -57,7 +55,6 @@ class Notate extends Component {
       </TabBarIOS.Item>
 
       <TabBarIOS.Item
-      style={styles.tabs}
       selected={this.state.selectedTab === 'notes'}
       // icon={{uri:'notations'}}
       title="Notations"
@@ -73,34 +70,5 @@ class Notate extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-    tabs: {
-      // fontSize: 12
-    }
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F5FCFF',
-//   },
-//   navbar: {
-//     backgroundColor:  "white" ,
-//     position: 'absolute',
-//     flexDirection: 'row',
-//     top: 0,
-//   },
-//   camera: {
-// //     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F5FCFF',
-//   },
-//   timerButton: {
-//     margin: 100,
-//     borderWidth: 2,
-//     backgroundColor: '#000000',
-//   },
-});
 
 AppRegistry.registerComponent('Notate', () => Notate);
