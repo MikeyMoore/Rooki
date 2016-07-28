@@ -231,7 +231,6 @@ def list(request):
 				instance = Document(
 					docfile = a_file,
 				)
-
 				instance.save()
 			return HttpResponseRedirect(reverse('list'))
     else:
