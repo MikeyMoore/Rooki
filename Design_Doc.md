@@ -9,7 +9,8 @@
 - Of players surveyed, ease of use and simplicity were the most cited desires from the app.
 
 ## Color palette Iteration 1
-- We have chosen a simple color pallete consisting largely of blues and greys. We started using a simple black and white theme white dark green accents, reminscent of our chess set and the green velvet underneath the pieces. We soon realized that our design looked like it was from an early 2000s webpage, and we ditched it for something less offensive to the eyes.
+- We have chosen a simple color pallete consisting largely of blues and greys. 
+-We started using a simple black and white theme white dark green accents, reminscent of our chess set and the green velvet underneath the pieces. We soon realized that our design looked like it was from an early 2000s webpage, and the design was ditched for something less offensive to the eyes.
 
 ## Wireframe Iteration 1
 ![Camera Page](./Camera_Page_Wireframe.png)
