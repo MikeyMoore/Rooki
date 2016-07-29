@@ -1,6 +1,7 @@
 package com.notate;
 
 import com.facebook.react.ReactActivity;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.lwansbrough.ReactCamera.ReactCamera;
 
 public class MainActivity extends ReactActivity {
