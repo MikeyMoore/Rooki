@@ -31,18 +31,22 @@ def move_piece(start_index, end_index):
 
 	piece = chessboard[start_index][-1]
 
+	print "piece"
 	print(piece)
 
+	print "start square"
 	print(start_square)
 
 	chessboard[start_index] = chessboard[start_index].replace(chessboard[start_index][-1], "o")
 
-	print(chessboard[start_index])
+	# print(chessboard[start_index])
 
 	chessboard[end_index] = chessboard[end_index].replace(chessboard[end_index][-1], piece)
 
+	print "end square"
 	print(chessboard[end_index])
 
+	print "updated chessboard"
 	print(chessboard)
 
 

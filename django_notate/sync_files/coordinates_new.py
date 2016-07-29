@@ -50,7 +50,7 @@ def coordinates(new_order):
 
 	# load our input image, convert it to grayscale, and blur it slightly
 	image = cv2.imread("DarkImageMove.jpg")
-	print "made it to coordinate"
+	print "Finding coordinates of move"
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
@@ -72,11 +72,8 @@ def coordinates(new_order):
 
 	# loop over the contours individually
 	for (i, c) in enumerate(cnts):
-		print "sound off: one"
 		# if the contour is not sufficiently large, ignore it
 		if cv2.contourArea(c) < 100:
-			print "two"
-			print new_order
 			continue
 
 		# compute the rotated bounding box of the contour, then
@@ -100,7 +97,6 @@ def coordinates(new_order):
 		# check to see if the new method should be used for
 		# ordering the coordinates
 		if new_order > 0:
-			print "three"
 			rect = perspective.order_points(box)
 
 		# show the re-ordered coordinates
@@ -109,7 +105,6 @@ def coordinates(new_order):
 
 		# loop over the original points and draw them
 		for ((x, y), color) in zip(rect, colors):
-			print "four"
 			cv2.circle(image, (int(x), int(y)), 5, color, -1)
 
 		# draw the object num at the top-left corner
@@ -122,7 +117,7 @@ def coordinates(new_order):
 		# cv2.waitKey(0)
 
 		# return (rect.astype("int"))
-		print "box"
-		print box
+		# print "box"
+		# print box
 		return box
 		
