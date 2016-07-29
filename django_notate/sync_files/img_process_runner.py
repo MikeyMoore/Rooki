@@ -31,10 +31,10 @@ def getBeforeCoordinates(img1,img2, new_order=-1):
 	
 	# Before coordinate function
 	coords = coordinates(new_order)
-	# x axis + y axis
-	twoCoords = [coords[0][0], coords[0][1]] 
 	print "before coords"
 	print coords
+	# x axis + y axis
+	twoCoords = [coords[0][0], coords[0][1]] 
 	return twoCoords
 	
 
