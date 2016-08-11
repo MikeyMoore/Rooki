@@ -106,7 +106,3 @@ def move_piece(start_index, end_index):
 		return notation
 
 	else:return "Oops"
-
-	
-
-# move_piece(2, 9)
