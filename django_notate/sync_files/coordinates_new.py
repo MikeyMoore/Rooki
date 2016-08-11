@@ -50,6 +50,7 @@ def coordinates(new_order):
 
 	# load our input image, convert it to grayscale, and blur it slightly
 	image = cv2.imread("DarkImageMove.jpg")
+	print "Finding coordinates of move"
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
@@ -116,5 +117,7 @@ def coordinates(new_order):
 		# cv2.waitKey(0)
 
 		# return (rect.astype("int"))
+		# print "box"
+		# print box
 		return box
 		

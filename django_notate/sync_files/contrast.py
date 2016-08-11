@@ -1,10 +1,10 @@
 from PIL import Image, ImageEnhance
 
 def darken(lightImage):
-	# print "made it to contrast"
+	print "Removing artifacts"
 	image = Image.open(lightImage)
 	# contrast = ImageEnhance.Contrast(image)
-	image2 = image.point(lambda p: p * 0.3)
+	image2 = image.point(lambda p: p * .4)
 	# print "I'm about to show image"
 	# image2.show()
 	# print "I'm about to write image"

@@ -17,7 +17,7 @@ def getAfterCoordinates(img1,img2, new_order=-1):
 	coords = coordinates(new_order)
 	# x axis + y axis
 	twoCoords = [coords[0][0], coords[0][1]] 
-	print "after coords"
+	print "after coordinates"
 	print coords
 	return twoCoords
 
@@ -31,10 +31,10 @@ def getBeforeCoordinates(img1,img2, new_order=-1):
 	
 	# Before coordinate function
 	coords = coordinates(new_order)
+	print "before coordinates"
+	print coords
 	# x axis + y axis
 	twoCoords = [coords[0][0], coords[0][1]] 
-	print "before coords"
-	print coords
 	return twoCoords
 	
 
