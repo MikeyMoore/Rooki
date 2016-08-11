@@ -6,7 +6,6 @@ from django.core.urlresolvers import reverse
 from notate_runner import run_opencv
 from sync_files.models import Document
 from sync_files.forms import DocumentForm
-from list_moves import listMoves
 from sync_files.models import Document, Notations
 import sqlite3
 
