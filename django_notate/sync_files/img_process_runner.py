@@ -15,7 +15,7 @@ def getBeforeCoordinates(img1,img2, new_order=-1):
 	
 	# Finds coordinates of the change in two images
 	coords = coordinates(new_order)
-	# This simplifies the the eight coordinates found
+	# This simplifies the eight coordinates found
 	# to two coordinates 
 	twoCoords = [coords[0][0], coords[0][1]] 
 
@@ -36,7 +36,7 @@ def getAfterCoordinates(img1,img2, new_order=-1):
 
 	# Finds coordinates of the change in two images
 	coords = coordinates(new_order)
-	# This simplifies the the eight coordinates found
+	# This simplifies the eight coordinates found
 	# to two coordinates 
 	twoCoords = [coords[0][0], coords[0][1]] 
 
