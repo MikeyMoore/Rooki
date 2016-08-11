@@ -1,4 +1,4 @@
-from Image_Diff_Detection_After import after_image, before_image
+from detect_change import after_image, before_image
 from contrast import darken
 from coordinates_new import coordinates
 import argparse
@@ -22,7 +22,7 @@ def getBeforeCoordinates(img1,img2, new_order=-1):
 	# Some console logs for debugging
 	print "before coords"
 	print coords
-	
+
 	return twoCoords
 
 def getAfterCoordinates(img1,img2, new_order=-1):
