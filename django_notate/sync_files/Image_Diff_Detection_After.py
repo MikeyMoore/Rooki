@@ -1,30 +1,30 @@
 import cv2
 import numpy as np
 
-def after_image(img1,img2):
-	image1 = cv2.imread(img1)#first image
-	image2 = cv2.imread(img2)#second image
+def after_image(firstImage,secondImage):
+	imageOne = cv2.imread(firstImage)#first image
+	imageTwo = cv2.imread(secondImage)#second image
 
-	difference2 = cv2.subtract(image1, image2)
+	changeDetected = cv2.subtract(imageOne, imageTwo)
 
-	result2 = not np.any(difference2)
+	movementFound = not np.any(changeDetected)
 
-	if result2 is True:
+	if movementFound is True:
 			print "The images are the same in after"
 	else:
-		cv2.imwrite("AfterImageMove.jpg", difference2)
+		cv2.imwrite("AfterImageMove.jpg", changeDetected)
 		print "the images are different in after"
 
-def before_image(img1,img2):
-	image1 = cv2.imread(img2)#second image
-	image2 = cv2.imread(img1)#first image
+def before_image(firstImage,secondImage):
+	imageOne = cv2.imread(secondImage)#second image
+	imageTwo = cv2.imread(firstImage)#first image
 
-	difference2 = cv2.subtract(image1, image2)
+	changeDetected = cv2.subtract(imageOne, imageTwo)
 
-	result2 = not np.any(difference2)
+	movementFound = not np.any(changeDetected)
 
-	if result2 is True:
+	if movementFound is True:
 			print "The images are the same in before"
 	else:
-		cv2.imwrite("BeforeImageMove.jpg", difference2)
+		cv2.imwrite("BeforeImageMove.jpg", changeDetected)
 		print "the images are different in before"
