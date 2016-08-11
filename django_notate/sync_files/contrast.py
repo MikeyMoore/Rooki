@@ -1,13 +1,16 @@
 from PIL import Image, ImageEnhance
 
 def darken(lightImage):
-	# print "made it to contrast"
 	image = Image.open(lightImage)
-	# contrast = ImageEnhance.Contrast(image)
-	image2 = image.point(lambda p: p * 0.3)
-	# print "I'm about to show image"
-	# image2.show()
-	# print "I'm about to write image"
-	image2.save("DarkImageMove.jpg")
-	# contrast.enhance().show()
-	# print "finished the contrast statement"
+	imageDarkened = image.point(lambda p: p * 0.3)
+
+	# Below is an attempt to brighten the found change in two images
+	# after it has been darkened to destroy unwanted artifacts.  It 
+	# currently does not work.
+
+	# contrast = ImageEnhance.Contrast(imageDarkened)
+	# pinpointedChange = contrast.enhance(6)
+	# pinpointedChange.show()
+
+	imageDarkened.save("DarkImageMove.jpg")
+	
