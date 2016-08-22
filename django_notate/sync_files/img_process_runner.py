@@ -4,7 +4,7 @@ from coordinates_new import coordinates
 import argparse
 import sys
 
-def getBeforeCoordinates(img1,img2, new_order=-1):
+def getBeforeCoordinates(img1,img2):
 	# This highlights change between two images 
 	# and saves as BeforeImageMove.jpg
 	before_image(img1,img2)
@@ -14,7 +14,7 @@ def getBeforeCoordinates(img1,img2, new_order=-1):
 	darken("BeforeImageMove.jpg")
 	
 	# Finds coordinates of the change in two images
-	coords = coordinates(new_order)
+	coords = coordinates()
 	# This simplifies the eight coordinates found
 	# to two coordinates 
 	twoCoords = [coords[0][0], coords[0][1]] 
@@ -25,7 +25,7 @@ def getBeforeCoordinates(img1,img2, new_order=-1):
 
 	return twoCoords
 
-def getAfterCoordinates(img1,img2, new_order=-1):
+def getAfterCoordinates(img1,img2):
 	# This highlights change between two images 
 	# and saves as AfterImageMove.jpg
 	after_image(img1,img2)
@@ -35,7 +35,7 @@ def getAfterCoordinates(img1,img2, new_order=-1):
 	darken("AfterImageMove.jpg")
 
 	# Finds coordinates of the change in two images
-	coords = coordinates(new_order)
+	coords = coordinates()
 	# This simplifies the eight coordinates found
 	# to two coordinates 
 	twoCoords = [coords[0][0], coords[0][1]] 
