@@ -7,37 +7,7 @@ import cv2
 import argparse
 import imutils
 
-def order_points_old(pts):
-	# initialize a list of coordinates that will be ordered
-	# such that the first entry in the list is the top-left,
-	# the second entry is the top-right, the third is the
-	# bottom-right, and the fourth is the bottom-left
-	rect = np.zeros((4, 2), dtype="float32")
- 
-	# the top-left point will have the smallest sum, whereas
-	# the bottom-right point will have the largest sum
-	s = pts.sum(axis=1)
-	rect[0] = pts[np.argmin(s)]
-	rect[2] = pts[np.argmax(s)]
- 
-	# now, compute the difference between the points, the
-	# top-right point will have the smallest difference,
-	# whereas the bottom-left will have the largest difference
-	diff = np.diff(pts, axis=1)
-	rect[1] = pts[np.argmin(diff)]
-	rect[3] = pts[np.argmax(diff)]
- 
-	# return the ordered coordinates
-	return rect
-
-def coordinates(new_order):
-
-	# construct the argument parse and parse the arguments
-	# TODO: Remove argument parsing from here
-	#ap = argparse.ArgumentParser()
-	#ap.add_argument("-n", "--new", type=int, default=-1,
-    #		help="whether or not the new order points should should be used")
-	#args = vars(ap.parse_args());
+def coordinates():
 
 	# load our input image, convert it to grayscale, and blur it slightly
 	image = cv2.imread("DarkImageMove.jpg")
@@ -48,10 +18,8 @@ def coordinates(new_order):
 	# perform edge detection, then perform a dilation + erosion to
 	# close gaps in between object edges
 	edged = cv2.Canny(gray, 50, 100)
-	edged = cv2.dilate(edged, None, iterations=1)
-	edged = cv2.erode(edged, None, iterations=1)
 
-	# find contours in the edge map
+	# find contours in the edge map, only need the corner points
 	cnts = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL,
 		cv2.CHAIN_APPROX_SIMPLE)
 	cnts = cnts[0] if imutils.is_cv2() else cnts[1]
@@ -77,29 +45,5 @@ def coordinates(new_order):
 		# show the original coordinates
 		# print("Object #{}:".format(i + 1))
 
-	# order the points in the contour such that they appear
-		# in top-left, top-right, bottom-right, and bottom-left
-		# order, then draw the outline of the rotated bounding
-		# box
-		rect = order_points_old(box)
-
-		# show the re-ordered coordinates
-		# print(rect.astype("int"))
-		# print("")
-
-		# loop over the original points and draw them
-		for ((x, y), color) in zip(rect, colors):
-			cv2.circle(image, (int(x), int(y)), 5, color, -1)
-
-		# draw the object num at the top-left corner
-		cv2.putText(image, "Object #{}".format(i + 1),
-			(int(rect[0][0] - 15), int(rect[0][1] - 15)),
-			cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 2)
-		# show the image
-		cv2.imwrite("ItsAlive.jpg", image)
-		# itsalive.show()
-		# cv2.waitKey(0)
-
-		# return (rect.astype("int"))
 		return box
 		
