@@ -18,7 +18,7 @@ var Game = require('./game.ios');
 var Notes = require('./notes.ios');
 var Load = require('./load.ios');
 
-class Notate extends Component {
+class Rooki extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,4 +71,4 @@ class Notate extends Component {
   }
 }
 
-AppRegistry.registerComponent('Notate', () => Notate);
+AppRegistry.registerComponent('Rooki', () => Rooki);

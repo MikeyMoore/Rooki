@@ -1,4 +1,4 @@
-# Notate
+# Rooki
 - World's first iOS app aiming to automically notate chess notation. Iteration 1 relies on the iPhone being in a fixed position for consistent image positioning.
 
 ## Members

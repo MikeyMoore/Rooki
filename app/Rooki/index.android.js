@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-class Notate extends Component {
+class Rooki extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Notate', () => Notate);
+AppRegistry.registerComponent('Rooki', () => Rooki);
