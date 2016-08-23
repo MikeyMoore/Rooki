@@ -1,4 +1,4 @@
-# Notate Design
+# Rooki Design
 
 ## Design Goals Iteration 1
 - For Iteration 1 the design needs to prioritize basic functionality over tricks and extra features. The team will focus time into making sure the app is sleek and easy to use, but we are aware that we cannot dive too far into design until the application is fully functional. In future iterations we will clean up the design as new features are developed.
